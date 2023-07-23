@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    </head>
+<body>
+    <div class="container">
+    <nav class="sidebar">
+        <header>
+             <div class="image-text">
+                <span class="image">
+                    <img src="bird.png" alt="logo">
+                </span>
+                
+                    </header>
+                    
+                    <div class="search-icon">
+                        <ul class="menu">
+                            <li><a href="#"> <img src="search.png"> </a></li>
+                        </ul>
+                    </div>
+                    <div class="home">
+                        <ul class="menu">
+                        <!-- <span class="img"> -->
+                           <div class="hut"> <li><a href="#"> <img src="006-hut.png" class="overlay"> </a></li> </div>
+                          <div class="news"> <li><a href="#"> <img src="005-newspaper.png"> </a></li> </div> 
+                           <div class="list"> <li><a href="#">  <img src="004-list-text.png"> </a></li> </div>
+                          <div class="user"> <li><a href="#"> <img src="007-user.png"> </a></li> </div>
+                        <!-- </span> -->
+                        </ul>
+                    </div>
+                   
+                    <div class="bell">
+                       
+                        <ul class="menu">
+                            
+                            <div class="bell-icon"><li><a href="#">  <img src="003-bell.png"> </a></li></div>
+                           
+                               
+                           <div class="bottom-icon"> <li><a href="#"> <img src="008-exit.png"></a></li> </div>
+
+                        </ul>
+                    </div>
+                </nav>
+              </div>
+              
+               <div class="dashboard">
+                    
+                   
+                    <div class="folder-icons">
+                        <div class="icon">
+                            <img src="profile-image.jpg"/>
+                        </div>
+                        <div class="name">
+                            <p class="bold">Hi Mike,</p> 
+                            <p class="normal">welcome back.</p>
+                        </div>
+                    </div>
+                    <div class="Day">
+                      <h6>Today</h6>
+                    </div>
+                    <div class="Summary">
+                      <h4>$19,892</h4>
+                      <p>Account Balance</p>
+                      <p class="bold">$4,000</p>
+                      <p>Year-to-Date Contributions</p>
+                      <p class="bold">$1,892</p>
+                      <p>Total Interest</p>
+                      
+                    </div>
+                     <div class="button-container">
+    <span class="button-text">I want to </span>
+    <span class="dropdown-icon">&#9662;</span>
+  </div>
+
+                    <div class="more">
+                        <h4>Recent transactions</h4>
+                        <p>2020-08-07</p>
+                        <h5>Withdrawl Transfer to Bank-XXX11</h5>
+                        <hr class="custom">
+                        <p>2020-07-21</p>
+                        <h5>Withdrawl Transfer to Bank-XXX11</h5>
+                        <hr class="custom">
+                        <p>2020-07-16</p>
+                        <h5>Withdrawl Transfer to Bank-XXX11</h5>
+                        <hr class="custom">
+                    </div>
+                  <div class="window">
+                    <div class="top">
+                        <h4 class="b">Retirement income</h4>
+                    </div>
+                    <div class="below">
+                        <p> Starting Year 2056</p>
+                    </div>
+                    <div class="card-container">
+                        <div class="card">
+                          <h2>$300,000</h2>
+                          <p>My Goal</p>
+                          <div class="color-line"></div>
+                        </div>
+                        <div class="card">
+                          <h2>59%</h2>
+                          <p>Goal Achieved</p>
+                          <div class="color-line"></div>
+                        </div>
+                        <div class="card">
+                          <h2>$300</h2>
+                          <p>Est. Monthly Income</p>
+                          <div class="color-line"></div>
+                        </div>
+                      </div>
+
+                   
+
+               <div class="over">
+                <h3>Contributions Overtime</h3>
+               </div>
+               <div class="chart">
+               <canvas id="myChart" width="400" height="200"></canvas>
+
+               <script>
+                // Data for the chart
+                var data = {
+                  labels: ['20', '', '25', '', '30', '', '35', '', '40', '', '60', '', '65'],
+                  datasets: [
+                    {
+                      label: 'Employer: K 73500',
+                      data: [5,6,7,8,9,10,11,12,13,14,15,16,17],
+                      backgroundColor: '#1a66ff',
+                      barPercentage: 0.5,
+                    },
+                    {
+                      label: 'Employee: K 52500',
+                      data: [2,3,4,5,6,7,8,9,10,11,12,13,14],
+                      backgroundColor: '#3377ff',
+                      barPercentage: 0.5,
+                    },
+                    {
+                      label: 'Total Interest: K 244,313',
+                      data: [4,5,6,7,8,9,10,11,12,13,14,15,16],
+                      backgroundColor: '#6699ff',
+                      barPercentage: 0.5,
+                    },
+                  ],
+                };
+              
+                // Chart configuration
+                var config = {
+                  type: 'bar',
+                  data: data,
+                  options: {
+                    scales: {
+                      x: {
+                        stacked: true,
+                      },
+                      y: {
+                        stacked: true,
+                      },
+                    },
+                    plugins: {
+                      legend: {
+                        display: true,
+                        position: 'top',
+                      },
+                    },
+                  },
+                };
+              
+                // Create the chart
+                var ctx = document.getElementById('myChart').getContext('2d');
+                var myChart = new Chart(ctx, config);
+              </script>
+              </div>
+              
+              
+                  </div>
+
+                  <div class="last"> 
+                    <div class="card2">
+                    <div class="lp">
+                    <h4>Retirement Strategy</h4>
+                </div>
+                <div class="more3">
+                    <p>Employee Contribution</p>
+                    <br>
+                </div>
+                    <div class="slider1">
+                        
+                        <input type="range" min="1" max="100" value="12" class="slide">
+                    <p>12%</p>
+                    </div>
+                    <div class="more3">
+                       <p> Retirement Age </p>
+                       <br>
+                    </div>
+                    
+                    <div class="slider2">
+                        
+                        <input type="range" min="1" max="100" value="65" class="slide">
+                        <p>65</p>
+                    </div>
+                    <hr class="custom">
+                    <div class="more4">
+                        <h4>Employer Contribution</h4> 
+                        <div class="input"><p>8.4%</p></div>
+                        
+                        </div>
+                        <hr class="custom">
+                      <div class="m5">
+                        <h4>Interest Rate</h4> 
+                        <div class="input"><p>5%</p></div>
+                      </div>
+                      <hr class="custom">
+                      <div class="button-container1">
+                        <span class="button-text1">Update</span>
+                        
+                      </div>
+                      <div class="view">
+                        <br>
+                        <p> <a href="#"> View Help Docs > </a></p>
+                      </div>
+                    </div>
+                    <div class="line"></div>
+                    <div class="text-field">
+                      <p class="a">Are you considering a</p>
+                      <p class="c">Housing advance?</p>
+                      <p class="d">Limited time reduce interest.</p>
+                      <br>
+                      <div class="link">
+                      <p ><a href="#"> Learn More > </a></p>
+                    </div>
+                    </div>
+                    </div>
+                    
+                </div> 
+</body>
+</html>
